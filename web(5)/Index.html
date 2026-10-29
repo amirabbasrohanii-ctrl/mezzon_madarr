@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مزون مادر | دوخت مانتو، عبا و شومیز</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="topbar" id="topbar" data-key="topbar">مزون مادر | تخصص دوخت مانتو، عبا و شومیز | ارسال به سراسر کشور</div>
+<header class="header">
+<div class="logo"><span class="logo-icon" id="logoIcon" data-key="logo">🌷</span><span id="storeName" data-key="name">مزون مادر</span></div>
+<nav class="nav">
+<a href="#home">خانه</a>
+<a href="#shop">فروشگاه</a>
+<a href="#pay">پرداخت</a>
+<a href="#how">نحوه سفارش</a>
+<a href="#support">پشتیبانی</a>
+</nav>
+<div class="actions">
+<input type="search" id="searchInput" placeholder="جست‌وجو...">
+<button id="adminBtn" class="btn-outline">مدیریت <span id="orderBadge" class="badge-num hidden">۰</span></button>
+<button id="cartBtn" class="btn-cart">🛍️ سبد <span id="cartCount">۰</span></button>
+</div>
+</header>
+<section class="hero" id="home">
+<div class="hero-text">
+<span class="badge" id="heroBadge" data-key="heroBadge">مزون مادر | مانتو • عبا • شومیز</span>
+<h1 id="heroTitle" data-key="title">دوخت مزونی مانتو، عبا و شومیز</h1>
+<p id="heroSubtitle" data-key="sub">ما فقط مانتو، عبا و شومیز می‌دوزیم؛ با اندازه و مدل دلخواه شما، تمیز و مزونی.</p>
+<div class="hero-btns">
+<a href="#shop" class="btn-primary">مشاهده مدل‌ها</a>
+<a href="#how" class="btn-white">نحوه سفارش؟</a>
+</div>
+</div>
+<div class="hero-art">
+<div class="hero-emoji" id="heroEmoji1" data-key="emoji1">🧥</div>
+<div class="hero-emoji2" id="heroEmoji2" data-key="emoji2">🧕</div>
+<div class="float-card" id="heroFloat" data-key="float">دوخت اختصاصی مزون مادر ✂️</div>
+</div>
+</section>
+<section class="cats">
+<button class="cat active" data-cat="all">همه</button>
+<button class="cat" data-cat="مانتو">مانتو</button>
+<button class="cat" data-cat="عبا">عبا</button>
+<button class="cat" data-cat="شومیز">شومیز</button>
+</section>
+<main class="shop" id="shop">
+<h2>🛒 مدل‌های مزون مادر <small id="count"></small></h2>
+<div class="grid" id="productsGrid"></div>
+</main>
+<section class="pay" id="pay">
+<h2 id="payTitle" data-key="payTitle">💳 پرداخت کارت‌به‌کارت</h2>
+<p id="payDesc" data-key="payDesc">مبلغ سفارش را به کارت فروشگاه واریز کن و کد پیگیری رسید را در فرم سفارش بنویس.</p>
+<div class="pay-card">
+<div class="pay-row"><span>شماره کارت:</span><b id="pubCardNumber" dir="ltr">ثبت نشده</b><button class="small-btn" onclick="copyCard()">کپی</button></div>
+<div class="pay-row"><span>به نام:</span><b id="pubCardOwner">ثبت نشده</b></div>
+<div class="pay-row"><span>بانک:</span><b id="pubBank">ثبت نشده</b></div>
+<p class="pay-note">پرداخت را در اپ بانک یا عابربانک انجام بده. رمز پویا و CVV2 خودت را هیچ‌جا در این سایت وارد نکن.</p>
+</div>
+</section>
+<section class="how" id="how">
+<h2 id="howTitle" data-key="howTitle">🧾 نحوه سفارش از مزون مادر</h2>
+<div class="steps">
+<div class="step"><span>۱</span><h3 id="step1t" data-key="s1t">انتخاب مدل</h3><p id="step1d" data-key="s1d">مانتو، عبا یا شومیز را به سبد اضافه کن</p></div>
+<div class="step"><span>۲</span><h3 id="step2t" data-key="s2t">ثبت مشخصات</h3><p id="step2d" data-key="s2d">نام، موبایل و آدرس را وارد کن</p></div>
+<div class="step"><span>۳</span><h3 id="step3t" data-key="s3t">هماهنگی دوخت</h3><p id="step3d" data-key="s3d">مدیر برای اندازه و مدل دقیق تماس می‌گیرد</p></div>
+</div>
+</section>
+<section id="customSectionsWrap" class="custom-wrap"></section>
+<section class="support" id="support">
+<h2 id="supTitle" data-key="supTitle">📞 پشتیبانی مزون مادر</h2>
+<p id="supText" data-key="supText">برای سایز، مدل، زمان آماده‌سازی یا پیگیری سفارش پیام بده.</p>
+<div class="sup-box">
+<div>📱 تلفن پشتیبانی: <b id="supPhone" data-key="supPhone">ثبت نشده</b></div>
+<div>🕒 ساعت پاسخ‌گویی: <span id="supTime" data-key="supTime">شنبه تا پنجشنبه ۱۰ تا ۱۸</span></div>
+<div>📸 اینستاگرام: <span id="supInstaShow">ثبت نشده</span></div>
+</div>
+</section>
+<section class="features">
+<div class="f"><span id="feat1i" data-key="f1i">🧥</span><h3 id="feat1t" data-key="f1t">مانتو مزونی</h3><p id="feat1d" data-key="f1d">دوخت تمیز با الگوی اختصاصی</p></div>
+<div class="f"><span id="feat2i" data-key="f2i">🧕</span><h3 id="feat2t" data-key="f2t">عبای مجلسی و روزمره</h3><p id="feat2d" data-key="f2d">کرپ، نخی و حریر با قد دلخواه</p></div>
+<div class="f"><span id="feat3i" data-key="f3i">👚</span><h3 id="feat3t" data-key="f3t">شومیز</h3><p id="feat3d" data-key="f3d">مجلسی و روزمره با سایز دقیق</p></div>
+<div class="f"><span id="feat4i" data-key="f4i">✂️</span><h3 id="feat4t" data-key="f4t">دوخت سفارشی</h3><p id="feat4d" data-key="f4d">فقط مانتو، عبا و شومیز می‌دوزیم</p></div>
+</section>
+<footer class="footer" id="footer">
+<div><h3 id="footerName">مزون مادر</h3><p id="footerAbout" data-key="footerAbout">تخصص ما فقط دوخت مانتو، عبا و شومیز است.</p></div>
+<div><h4>تماس با ما</h4><p style="font-size:14px;line-height:2">آدرس: <span id="fAddress" data-key="address">ثبت نشده</span><br>تلفن: <span id="fPhone" data-key="phone">ثبت نشده</span><br>اینستاگرام: <span id="fInsta" data-key="insta">ثبت نشده</span></p></div>
+<div><h4>دسترسی سریع</h4><a href="#home">خانه</a><br><a href="#shop">مدل‌ها</a><br><a href="#pay">پرداخت</a><br><a href="#support">پشتیبانی</a><br><a href="#" onclick="openAdmin();return false;">مدیریت فروشگاه</a></div>
+</footer>
+<div class="drawer" id="cartDrawer">
+<div class="drawer-head"><h3>سبد خرید شما</h3><button onclick="toggleCart(false)">✕</button></div>
+<div id="cartItems" class="cart-items"></div>
+<div class="drawer-foot">
+<div class="total">جمع کل: <b id="cartTotal">۰ تومان</b></div>
+<button class="btn-primary full" onclick="openCheckout()">ثبت سفارش ✅</button>
+</div>
+</div>
+<div class="modal" id="checkoutModal">
+<div class="modal-box">
+<div class="modal-head"><h3>تکمیل سفارش</h3><button onclick="closeCheckout()">✕</button></div>
+<div id="checkoutSummary" class="checkout-summary"></div>
+<div id="checkoutPay" class="checkout-pay"></div>
+<form id="checkoutForm" class="form">
+<label>نام و نام خانوادگی تحویل‌گیرنده<input id="oName" required placeholder="مثلاً سارا محمدی"></label>
+<label>شماره موبایل<input id="oMobile" required inputmode="numeric" placeholder="0912..."></label>
+<label>آدرس کامل<input id="oAddress" required placeholder="شهر، خیابان، پلاک، واحد..."></label>
+<label>توضیحات دوخت (اختیاری)<input id="oNote" placeholder="مثلاً سایز، قد، رنگ، مدل یقه..."></label>
+<label>کد پیگیری رسید واریزی<input id="oReceipt" inputmode="numeric" placeholder="کدی که بانک بعد از کارت‌به‌کارت می‌دهد"></label>
+<button type="submit" class="btn-primary full">ثبت نهایی سفارش 🌷</button>
+</form>
+<div id="checkoutSuccess" class="hidden center">
+<div style="font-size:50px">✅</div>
+<h3>سفارشت ثبت شد!</h3>
+<p id="trackCode"></p>
+<p style="font-size:13px;color:#555">مدیر بعد از بررسی واریزی با تو تماس می‌گیرد.</p>
+<button class="btn-primary" onclick="closeCheckout()">باشه، ممنون</button>
+</div>
+</div>
+</div>
+<div class="modal" id="adminModal">
+<div class="modal-box large">
+<div class="modal-head"><h3>پنل مدیریت مزون مادر</h3><button onclick="closeAdmin()">✕</button></div>
+<div class="tabs">
+<button id="tab1" class="active" onclick="switchTab(1)">محصولات</button>
+<button id="tab2" onclick="switchTab(2)">سفارش‌ها <span id="tabBadge"></span></button>
+<button id="tab3" onclick="switchTab(3)">ویرایش کل سایت ✏️</button>
+<button id="tab4" onclick="switchTab(4)">بخش‌های متنی</button>
+</div>
+<div id="panel1">
+<button class="btn-primary" onclick="newProduct()">+ مدل جدید با عکس</button>
+<div id="adminList"></div>
+<form id="productForm" class="form hidden">
+<input type="hidden" id="pId">
+<label>نام مدل<input id="pName" required placeholder="مثلاً مانتو کتی مشکی"></label>
+<div class="row"><label>قیمت (تومان)<input id="pPrice" type="number" required placeholder="890000"></label><label>قیمت قبل تخفیف<input id="pOld" type="number" placeholder="1290000"></label></div>
+<div class="row"><label>دسته<select id="pCat"><option>مانتو</option><option>عبا</option><option>شومیز</option></select></label><label>موجودی<input id="pStock" type="number" value="10"></label></div>
+<label>عکس مدل — از گالری انتخاب کن، لینک نمی‌خواهد<input type="file" id="pImageFile" accept="image/*"></label>
+<img id="pPreview" class="preview" alt="پیش‌نمایش">
+<label>توضیحات<input id="pDesc" placeholder="جنس پارچه، سایز، قد..."></label>
+<div class="row"><button type="submit" class="btn-primary">ذخیره ✅</button><button type="button" class="btn-outline" onclick="document.getElementById('productForm').classList.add('hidden')">انصراف</button></div>
+</form>
+</div>
+<div id="panel2" class="hidden">
+<div class="row"><button class="btn-outline" onclick="renderOrders()">🔄 به‌روزرسانی</button><button class="btn-outline" onclick="exportOrders()">دانلود سفارش‌ها</button></div>
+<div id="ordersList" style="margin-top:12px"></div>
+</div>
+<div id="panel3" class="hidden">
+<div class="live-bar">
+<button class="btn-primary" id="liveBtn" onclick="toggleLiveEdit()">✏️ روشن کردن ویرایش زنده</button>
+<p style="font-size:13px;color:#555">وقتی روشنه، روی هر متنی تو صفحه کلیک کن و مستقیم تایپ کن.</p>
+</div>
+<div class="form">
+<details open><summary>۱. نوار بالا و سربرگ</summary>
+<label>متن نوار بالای سایت<input id="sTopbar"></label>
+<div class="row"><label>نام فروشگاه<input id="sName"></label><label>لوگو (ایموجی)<input id="sLogo"></label></div>
+</details>
+<details open><summary>۲. بخش اصلی</summary>
+<label>نشان بالای تیتر<input id="sHeroBadge"></label>
+<label>تیتر اصلی<input id="sTitle"></label>
+<label>زیرتیتر<input id="sSub"></label>
+<div class="row"><label>ایموجی بزرگ<input id="sEmoji1"></label><label>ایموجی کوچک<input id="sEmoji2"></label></div>
+<label>متن کارت روی عکس<input id="sFloat"></label>
+<label>رنگ اصلی سایت<input type="color" id="sTheme" value="#c2185b"></label>
+<div class="colors">
+<button type="button" onclick="setTheme('#c2185b')" style="background:#c2185b">زرشکی</button>
+<button type="button" onclick="setTheme('#e91e63')" style="background:#e91e63">صورتی</button>
+<button type="button" onclick="setTheme('#2e7d32')" style="background:#2e7d32">سبز</button>
+<button type="button" onclick="setTheme('#1a237e')" style="background:#1a237e">سرمه‌ای</button>
+<button type="button" onclick="setTheme('#6a1b9a')" style="background:#6a1b9a">بنفش</button>
+<button type="button" onclick="setTheme('#111111')" style="background:#111">مشکی</button>
+</div>
+</details>
+<details><summary>۳. نحوه سفارش</summary>
+<label>تیتر بخش<input id="sHowTitle"></label>
+<div class="row"><label>قدم ۱ - عنوان<input id="sS1t"></label><label>قدم ۱ - توضیح<input id="sS1d"></label></div>
+<div class="row"><label>قدم ۲ - عنوان<input id="sS2t"></label><label>قدم ۲ - توضیح<input id="sS2d"></label></div>
+<div class="row"><label>قدم ۳ - عنوان<input id="sS3t"></label><label>قدم ۳ - توضیح<input id="sS3d"></label></div>
+</details>
+<details><summary>۴. ویژگی‌ها</summary>
+<div class="row"><label>آیکون ۱<input id="sF1i"></label><label>عنوان ۱<input id="sF1t"></label></div>
+<label>توضیح ۱<input id="sF1d"></label>
+<div class="row"><label>آیکون ۲<input id="sF2i"></label><label>عنوان ۲<input id="sF2t"></label></div>
+<label>توضیح ۲<input id="sF2d"></label>
+<div class="row"><label>آیکون ۳<input id="sF3i"></label><label>عنوان ۳<input id="sF3t"></label></div>
+<label>توضیح ۳<input id="sF3d"></label>
+<div class="row"><label>آیکون ۴<input id="sF4i"></label><label>عنوان ۴<input id="sF4t"></label></div>
+<label>توضیح ۴<input id="sF4d"></label>
+</details>
+<details open><summary>۵. تماس و پایین سایت</summary>
+<label>متن درباره ما<input id="sFooterAbout"></label>
+<div class="row"><label>آدرس<input id="sAddress"></label><label>تلفن<input id="sPhone"></label></div>
+<label>اینستاگرام<input id="sInsta" dir="ltr"></label>
+</details>
+<details open><summary>۶. پرداخت کارت‌به‌کارت (کارت فروشگاه)</summary>
+<label>تیتر بخش پرداخت<input id="sPayTitle"></label>
+<label>توضیح پرداخت<input id="sPayDesc"></label>
+<label>نام صاحب کارت<input id="sCardOwner"></label>
+<label>شماره کارت ۱۶ رقمی فروشگاه<input id="sCardNumber" inputmode="numeric"></label>
+<label>نام بانک<input id="sBank"></label>
+<div class="bank-admin-view" id="adminCardView"></div>
+</details>
+<details open><summary>۷. پشتیبانی</summary>
+<label>تیتر پشتیبانی<input id="sSupTitle"></label>
+<label>متن پشتیبانی<input id="sSupText"></label>
+<div class="row"><label>تلفن پشتیبانی<input id="sSupPhone"></label><label>ساعت پاسخ‌گویی<input id="sSupTime"></label></div>
+</details>
+<button class="btn-primary" onclick="saveSettings()">💾 ذخیره کل سایت ✅</button>
+<div class="row"><button class="btn-outline" type="button" onclick="exportProducts()">دانلود بکاپ</button><button class="btn-outline" type="button" onclick="resetAll()">بازنشانی</button></div>
+</div>
+</div>
+<div id="panel4" class="hidden">
+<p class="hint">بخش متنی جدید به صفحه اضافه کن. مثل شرایط دوخت، درباره ما، اطلاعیه.</p>
+<button class="btn-primary" onclick="newSectionForm()">+ بخش جدید ✏️</button>
+<div id="sectionsAdminList" style="margin-top:12px"></div>
+<form id="sectionForm" class="form hidden" style="margin-top:12px">
+<input type="hidden" id="secId">
+<label>عنوان بخش<input id="secTitle" required placeholder="مثلاً شرایط دوخت سفارشی"></label>
+<label>متن بخش<textarea id="secText" rows="4" required placeholder="متن کامل را اینجا بنویس..."></textarea></label>
+<div class="row"><button type="submit" class="btn-primary">ذخیره بخش ✅</button><button type="button" class="btn-outline" onclick="document.getElementById('sectionForm').classList.add('hidden')">انصراف</button></div>
+</form>
+</div>
+</div>
+</div>
+<div id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
